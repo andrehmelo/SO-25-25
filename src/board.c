@@ -1,9 +1,12 @@
 #include "board.h"
+#include "parser.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include <time.h>
 #include <unistd.h>
 #include <stdarg.h>
+#include <fcntl.h>
 
 FILE * debugfile;
 
@@ -412,9 +415,248 @@ int load_level(board_t *board, int points) {
 }
 
 void unload_level(board_t * board) {
-    free(board->board);
-    free(board->pacmans);
-    free(board->ghosts);
+    // Safe cleanup - check for NULL pointers
+    if (board->board) {
+        free(board->board);
+        board->board = NULL;
+    }
+    if (board->pacmans) {
+        free(board->pacmans);
+        board->pacmans = NULL;
+    }
+    if (board->ghosts) {
+        free(board->ghosts);
+        board->ghosts = NULL;
+    }
+}
+
+// =============================================================================
+// File-based Loading Functions (Exercise 1)
+// =============================================================================
+
+// Helper: cleanup is now just an alias to unload_level (both are NULL-safe)
+#define cleanup_board unload_level
+
+// Helper: load behavior from .m or .p file (DRY - Don't Repeat Yourself)
+static int load_agent_behavior(const char* dir_path, const char* filename,
+                               int* passo, int* row, int* col,
+                               command_t* moves, int* n_moves) {
+    char filepath[512];
+    snprintf(filepath, sizeof(filepath), "%s/%s", dir_path, filename);
+    
+    int fd = open(filepath, O_RDONLY);
+    if (fd < 0) {
+        return -1;
+    }
+    
+    char commands[MAX_MOVES];
+    int turns[MAX_MOVES];
+    int n_cmds;
+    
+    if (parse_behavior_file(fd, passo, row, col, commands, turns, MAX_MOVES, &n_cmds) < 0) {
+        close(fd);
+        return -1;
+    }
+    close(fd);
+    
+    *n_moves = n_cmds;
+    for (int i = 0; i < n_cmds; i++) {
+        moves[i].command = commands[i];
+        moves[i].turns = turns[i];
+        moves[i].turns_left = turns[i];
+    }
+    
+    return 0;
+}
+
+int load_ghost_from_file(board_t* board, const char* dir_path, const char* filename, int ghost_index) {
+    int passo, row, col, n_moves;
+    command_t moves[MAX_MOVES];
+    
+    if (load_agent_behavior(dir_path, filename, &passo, &row, &col, moves, &n_moves) < 0) {
+        return -1;
+    }
+    
+    ghost_t* ghost = &board->ghosts[ghost_index];
+    ghost->pos_x = col;
+    ghost->pos_y = row;
+    ghost->passo = passo;
+    ghost->waiting = passo;
+    ghost->current_move = 0;
+    ghost->n_moves = n_moves;
+    
+    for (int i = 0; i < n_moves; i++) {
+        ghost->moves[i] = moves[i];
+    }
+    
+    // Place ghost on board
+    int index = row * board->width + col;
+    board->board[index].content = 'M';
+    
+    return 0;
+}
+
+int load_pacman_from_file(board_t* board, const char* dir_path, const char* filename, int points) {
+    int passo, row, col, n_moves;
+    command_t moves[MAX_MOVES];
+    
+    if (load_agent_behavior(dir_path, filename, &passo, &row, &col, moves, &n_moves) < 0) {
+        return -1;
+    }
+    
+    // Only one pacman, always index 0
+    pacman_t* pac = &board->pacmans[0];
+    pac->pos_x = col;
+    pac->pos_y = row;
+    pac->passo = passo;
+    pac->waiting = passo;
+    pac->alive = 1;
+    pac->points = points;
+    pac->current_move = 0;
+    pac->n_moves = n_moves;
+    
+    for (int i = 0; i < n_moves; i++) {
+        pac->moves[i] = moves[i];
+    }
+    
+    // Place pacman on board
+    int index = row * board->width + col;
+    board->board[index].content = 'P';
+    
+    return 0;
+}
+
+int load_level_from_file(board_t* board, const char* dir_path, const char* level_file, int accumulated_points) {
+    char filepath[512];
+    snprintf(filepath, sizeof(filepath), "%s/%s", dir_path, level_file);
+    
+    int fd = open(filepath, O_RDONLY);
+    if (fd < 0) {
+        return -1;
+    }
+    
+    int rows, cols, tempo;
+    char pac_file[256] = {0};
+    char mon_files[MAX_GHOSTS][256];
+    int n_mons;
+    char board_data[4096];  // Should be enough for reasonable boards
+    
+    if (parse_level_file(fd, &rows, &cols, &tempo, pac_file, mon_files, MAX_GHOSTS, &n_mons, board_data, sizeof(board_data)) < 0) {
+        close(fd);
+        return -1;
+    }
+    close(fd);
+    
+    // Setup board dimensions
+    board->height = rows;
+    board->width = cols;
+    board->tempo = tempo;
+    board->n_ghosts = n_mons;
+    board->n_pacmans = 1;
+    
+    // Copy level name from level file (without extension)
+    strncpy(board->level_name, level_file, sizeof(board->level_name) - 1);
+    char* dot = strrchr(board->level_name, '.');
+    if (dot) *dot = '\0';
+    
+    // Allocate memory
+    board->board = calloc(cols * rows, sizeof(board_pos_t));
+    board->pacmans = calloc(1, sizeof(pacman_t));
+    board->ghosts = calloc(n_mons, sizeof(ghost_t));
+    
+    if (!board->board || !board->pacmans || !board->ghosts) {
+        cleanup_board(board);
+        return -1;
+    }
+    
+    // Parse board content
+    // Legend: 'X' = wall, '@' = portal, 'o' = walkable space (with dot)
+    int dot_count = 0, portal_count = 0, wall_count = 0;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            int board_idx = i * cols + j;
+            char c = board_data[board_idx];
+            
+            switch (c) {
+                case 'X':  // Wall
+                    board->board[board_idx].content = 'W';
+                    wall_count++;
+                    break;
+                case '@':  // Portal
+                    board->board[board_idx].content = ' ';
+                    board->board[board_idx].has_portal = 1;
+                    portal_count++;
+                    break;
+                case 'o':  // Walkable space (with dot)
+                    board->board[board_idx].content = ' ';
+                    board->board[board_idx].has_dot = 1;
+                    dot_count++;
+                    break;
+                default:   // Anything else is empty
+                    board->board[board_idx].content = ' ';
+                    break;
+            }
+        }
+    }
+    
+    debug("Board parsed: %d walls, %d dots, %d portals\n", wall_count, dot_count, portal_count);
+    
+    // Store file references
+    strncpy(board->pacman_file, pac_file, sizeof(board->pacman_file) - 1);
+    for (int i = 0; i < n_mons && i < MAX_GHOSTS; i++) {
+        strncpy(board->ghosts_files[i], mon_files[i], sizeof(board->ghosts_files[i]) - 1);
+    }
+    
+    // Load entities from their behavior files
+    for (int i = 0; i < n_mons; i++) {
+        if (load_ghost_from_file(board, dir_path, mon_files[i], i) < 0) {
+            cleanup_board(board);
+            return -1;
+        }
+    }
+    
+    if (pac_file[0] != '\0') {
+        // Load Pacman from behavior file (automatic movement)
+        if (load_pacman_from_file(board, dir_path, pac_file, accumulated_points) < 0) {
+            cleanup_board(board);
+            return -1;
+        }
+    } else {
+        // No .p file - create manual Pacman at default position
+        // Find first walkable position (has_dot or empty, not wall/portal)
+        pacman_t* pac = &board->pacmans[0];
+        pac->alive = 1;
+        pac->points = accumulated_points;
+        pac->passo = 0;
+        pac->waiting = 0;
+        pac->current_move = 0;
+        pac->n_moves = 0;  // 0 = manual control
+        
+        // Find starting position: first 'o' cell (row-major order)
+        int found = 0;
+        for (int i = 0; i < rows && !found; i++) {
+            for (int j = 0; j < cols && !found; j++) {
+                int idx = i * cols + j;
+                if (board->board[idx].has_dot && board->board[idx].content == ' ') {
+                    pac->pos_x = j;
+                    pac->pos_y = i;
+                    board->board[idx].content = 'P';
+                    board->board[idx].has_dot = 0;  // Pacman "eats" starting dot
+                    found = 1;
+                }
+            }
+        }
+        
+        if (!found) {
+            debug("Error: No valid starting position for manual Pacman\n");
+            cleanup_board(board);
+            return -1;
+        }
+        
+        debug("Manual Pacman placed at (%d, %d)\n", pac->pos_x, pac->pos_y);
+    }
+    
+    return 0;
 }
 
 void open_debug_file(char *filename) {

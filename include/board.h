@@ -13,12 +13,14 @@ typedef enum {
     DEAD_PACMAN = -2,
 } move_t;
 
+// Single command
 typedef struct {
     char command;
     int turns;
     int turns_left;
 } command_t;
 
+// Pacman state
 typedef struct {
     int pos_x, pos_y; //current position
     int alive; // if is alive
@@ -30,6 +32,7 @@ typedef struct {
     int waiting;
 } pacman_t;
 
+// Ghost state
 typedef struct {
     int pos_x, pos_y; //current position
     int passo; // number of plays to wait between each move
@@ -40,12 +43,14 @@ typedef struct {
     int charged;
 } ghost_t;
 
+// A single cell on the board
 typedef struct {
     char content;   // stuff like 'P' for pacman 'M' for monster/ghost and 'W' for wall
     int has_dot;    // whether there is a dot in this position or not
     int has_portal; // whether there is a portal in this position or not
 } board_pos_t;
 
+// The full game board
 typedef struct {
     int width, height;      // dimensions of the board
     board_pos_t* board;     // actual board, a row-major matrix
@@ -82,6 +87,19 @@ int load_level(board_t* board, int accumulated_points);
 
 /*Unloads levels loaded by load_level*/
 void unload_level(board_t * board);
+
+// =============================================================================
+// File-based Loading Functions (Exercise 1)
+// =============================================================================
+
+/*Loads a ghost from a .m behavior file*/
+int load_ghost_from_file(board_t* board, const char* dir_path, const char* filename, int ghost_index);
+
+/*Loads a pacman from a .p behavior file*/
+int load_pacman_from_file(board_t* board, const char* dir_path, const char* filename, int points);
+
+/*Loads a level from a .lvl file in the given directory*/
+int load_level_from_file(board_t* board, const char* dir_path, const char* level_file, int accumulated_points);
 
 // DEBUG FILE
 
