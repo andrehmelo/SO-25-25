@@ -177,6 +177,8 @@ int parse_behavior_file(int fd, int *passo, int *row, int *col,
             case 'D':
             case 'R':
             case 'C':
+            case 'G':  // Quicksave (Exercise 2)
+            case 'Q':  // Quit game
                 commands[*n_cmds] = cmd;
                 turns[*n_cmds] = 1;
                 (*n_cmds)++;

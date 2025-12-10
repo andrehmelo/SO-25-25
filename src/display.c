@@ -166,6 +166,7 @@ char get_input() {
         case 'A':
         case 'D':
         case 'Q':
+        case 'G':  // Exercise 2: Create checkpoint
 
             return (char)ch;
         

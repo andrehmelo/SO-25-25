@@ -1,17 +1,21 @@
 #include "board.h"
 #include "display.h"
+#include "threads.h"
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
 #include <dirent.h>
 #include <fcntl.h>
+#include <sys/wait.h>
+#include <pthread.h>
 
 #define CONTINUE_PLAY 0
 #define NEXT_LEVEL 1
 #define QUIT_GAME 2
 #define LOAD_BACKUP 3
 #define CREATE_BACKUP 4
+#define PACMAN_DIED 5
 
 // MAX_LEVELS is defined in board.h
 
@@ -87,7 +91,7 @@ static void free_level_files(char* level_files[], int count) {
 }
 
 // =============================================================================
-// Game Logic
+// Game Logic (Exercise 3: Threaded version)
 // =============================================================================
 
 void screen_refresh(board_t * game_board, int mode) {
@@ -98,53 +102,63 @@ void screen_refresh(board_t * game_board, int mode) {
         sleep_ms(game_board->tempo);       
 }
 
-int play_board(board_t * game_board) {
-    pacman_t* pacman = &game_board->pacmans[0];
-    command_t* play;
-    if (pacman->n_moves == 0) { // if is user input
-        command_t c; 
-        c.command = get_input();
-
-        if(c.command == '\0')
-            return CONTINUE_PLAY;
-
-        c.turns = 1;
-        play = &c;
-    }
-    else { // else if the moves are pre-defined in the file
-        // avoid buffer overflow wrapping around with modulo of n_moves
-        // this ensures that we always access a valid move for the pacman
-        play = &pacman->moves[pacman->current_move%pacman->n_moves];
-    }
-
-    debug("KEY %c\n", play->command);
-
-    if (play->command == 'Q') {
-        return QUIT_GAME;
-    }
-
-    int result = move_pacman(game_board, 0, play);
-    if (result == REACHED_PORTAL) {
-        // Next level
-        return NEXT_LEVEL;
-    }
-
-    if(result == DEAD_PACMAN) {
+/**
+ * Play one level using threads.
+ * Returns: NEXT_LEVEL, QUIT_GAME, PACMAN_DIED, or CREATE_BACKUP
+ */
+static int play_level_threaded(board_t* game_board) {
+    game_context_t ctx;
+    
+    if (init_game_context(&ctx, game_board) < 0) {
+        debug("Error: Failed to initialize game context\n");
         return QUIT_GAME;
     }
     
-    for (int i = 0; i < game_board->n_ghosts; i++) {
-        ghost_t* ghost = &game_board->ghosts[i];
-        // avoid buffer overflow wrapping around with modulo of n_moves
-        // this ensures that we always access a valid move for the ghost
-        move_ghost(game_board, i, &ghost->moves[ghost->current_move%ghost->n_moves]);
-    }
-
-    if (!game_board->pacmans[0].alive) {
+    // Initial board draw
+    draw_board(game_board, DRAW_MENU);
+    refresh_screen();
+    
+    // Start all game threads
+    if (start_game_threads(&ctx) < 0) {
+        debug("Error: Failed to start game threads\n");
+        cleanup_game_context(&ctx);
         return QUIT_GAME;
-    }      
-
-    return CONTINUE_PLAY;  
+    }
+    
+    // Wait for game to end (threads will set state)
+    game_state_t final_state;
+    while (ctx.threads_running) {
+        sleep_ms(50);  // Check periodically
+        
+        final_state = get_game_state(&ctx);
+        if (final_state != GAME_RUNNING) {
+            break;
+        }
+    }
+    
+    // Get final state before stopping threads
+    final_state = get_game_state(&ctx);
+    bool pacman_died = ctx.pacman_dead;
+    
+    // Stop all threads
+    stop_game_threads(&ctx);
+    cleanup_game_context(&ctx);
+    
+    // Convert game state to return value
+    switch (final_state) {
+        case GAME_NEXT_LEVEL:
+            return NEXT_LEVEL;
+        case GAME_QUIT:
+            return QUIT_GAME;
+        case GAME_CHECKPOINT:
+            return CREATE_BACKUP;
+        case GAME_OVER:
+            return pacman_died ? PACMAN_DIED : QUIT_GAME;
+        case GAME_WON:
+            return NEXT_LEVEL;
+        default:
+            return QUIT_GAME;
+    }
 }
 
 int main(int argc, char** argv) {
@@ -190,6 +204,7 @@ int main(int argc, char** argv) {
     bool game_over = false;
     board_t game_board = {0};
     int current_level = 0;
+    bool has_checkpoint = false;  // Exercise 2: only one checkpoint allowed
 
     while (!game_over && current_level < n_levels) {
         // Load level from file
@@ -201,36 +216,114 @@ int main(int argc, char** argv) {
         debug("Loaded level %d: %s\n", current_level, level_files[current_level]);
         print_board(&game_board);
         
-        draw_board(&game_board, DRAW_MENU);
-        refresh_screen();
-
-        while (true) {
-            int result = play_board(&game_board); 
+        // Inner loop: play same level (may repeat after checkpoint/restore)
+        bool level_done = false;
+        while (!level_done && !game_over) {
+            // Exercise 3: Play level using threads
+            int result = play_level_threaded(&game_board);
 
             if (result == NEXT_LEVEL) {
                 accumulated_points = game_board.pacmans[0].points;
                 screen_refresh(&game_board, DRAW_WIN);
                 sleep_ms(game_board.tempo);
                 current_level++;
+                level_done = true;
                 
                 // Check if this was the last level
                 if (current_level >= n_levels) {
                     game_won = true;
                     game_over = true;
                 }
-                break;
             }
-
-            if (result == QUIT_GAME) {
+            else if (result == QUIT_GAME) {
                 screen_refresh(&game_board, DRAW_GAME_OVER); 
                 sleep_ms(game_board.tempo);
                 game_over = true;
-                break;
+                level_done = true;
             }
-    
-            screen_refresh(&game_board, DRAW_MENU); 
-
-            accumulated_points = game_board.pacmans[0].points;      
+            // Exercise 2: Handle checkpoint creation with fork
+            else if (result == CREATE_BACKUP) {
+                if (!has_checkpoint) {
+                    debug("[%d] Creating checkpoint...\n", getpid());
+                    
+                    pid_t pid = fork();
+                    
+                    if (pid < 0) {
+                        // Fork failed
+                        debug("[%d] Fork failed!\n", getpid());
+                    }
+                    else if (pid == 0) {
+                        // CHILD: continues playing the game from current state
+                        debug("[%d] Child process - continuing game\n", getpid());
+                        has_checkpoint = true;  // Child knows there's a backup
+                        
+                        // Reinitialize ncurses in child (fork duplicates but needs refresh)
+                        terminal_cleanup();
+                        terminal_init();
+                        
+                        // Continue inner loop - same board state preserved by fork!
+                        continue;
+                    }
+                    else {
+                        // PARENT: becomes the checkpoint, waits for child
+                        debug("[%d] Parent process - waiting as checkpoint (child=%d)\n", getpid(), pid);
+                        
+                        int status;
+                        waitpid(pid, &status, 0);
+                        
+                        // Child finished - check why
+                        if (WIFEXITED(status)) {
+                            int exit_code = WEXITSTATUS(status);
+                            debug("[%d] Child exited with code %d\n", getpid(), exit_code);
+                            
+                            if (exit_code == 0) {
+                                // Child won or quit normally - parent also exits
+                                debug("[%d] Child completed successfully, parent exiting\n", getpid());
+                                game_over = true;
+                                level_done = true;
+                            }
+                            else {
+                                // Child died (Pacman died) - parent resumes from checkpoint
+                                debug("[%d] Pacman died! Restoring from checkpoint...\n", getpid());
+                                has_checkpoint = false;  // Can create new checkpoint
+                                
+                                // Reinitialize ncurses (was inherited but child used it)
+                                terminal_cleanup();
+                                terminal_init();
+                                
+                                // Parent already has the game state from the fork moment
+                                // Continue inner loop with preserved board state
+                                continue;
+                            }
+                        }
+                    }
+                }
+                else {
+                    debug("[%d] Checkpoint already exists, ignoring 'G'\n", getpid());
+                    // Continue playing same level - inner loop continues
+                    continue;
+                }
+            }
+            // Exercise 2: Pacman died - if we're a child, exit with error
+            else if (result == PACMAN_DIED) {
+                screen_refresh(&game_board, DRAW_GAME_OVER);
+                sleep_ms(game_board.tempo);
+                
+                if (has_checkpoint) {
+                    // We're the child process - exit with error so parent can restore
+                    debug("[%d] Child: Pacman died, exiting for restore\n", getpid());
+                    unload_level(&game_board);
+                    free_level_files(level_files, n_levels);
+                    terminal_cleanup();
+                    close_debug_file();
+                    _exit(1);  // Use _exit to avoid flushing parent's buffers
+                }
+                else {
+                    // No checkpoint - game over
+                    game_over = true;
+                    level_done = true;
+                }
+            }
         }
         
         print_board(&game_board);
