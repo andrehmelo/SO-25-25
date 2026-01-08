@@ -79,7 +79,6 @@ int move_pacman(board_t* board, int pacman_index, command_t* command) {
             break;
         case 'T': // Wait
             if (command->turns_left == 1) {
-                pac->current_move += 1; // move on
                 command->turns_left = command->turns;
             }
             else command->turns_left -= 1;
@@ -88,8 +87,7 @@ int move_pacman(board_t* board, int pacman_index, command_t* command) {
             return INVALID_MOVE; // Invalid direction
     }
 
-    // Logic for the WASD movement
-    pac->current_move+=1;
+    // Logic for the WASD movement (current_move is incremented by thread for automatic pacman)
 
     // Check boundaries
     if (!is_valid_position(board, new_x, new_y)) {
@@ -100,21 +98,22 @@ int move_pacman(board_t* board, int pacman_index, command_t* command) {
     int old_index = get_board_index(board, pac->pos_x, pac->pos_y);
     char target_content = board->board[new_index].content;
 
-    if (board->board[new_index].has_portal) {
-        board->board[old_index].content = ' ';
-        board->board[new_index].content = 'P';
-        return REACHED_PORTAL;
-    }
-
-    // Check for walls
+    // Check for walls FIRST
     if (target_content == 'W') {
         return INVALID_MOVE;
     }
 
-    // Check for ghosts
+    // Check for ghosts BEFORE portal (ghost on portal = death, not victory!)
     if (target_content == 'M') {
         kill_pacman(board, pacman_index);
         return DEAD_PACMAN;
+    }
+
+    // Check for portal (only after confirming no ghost)
+    if (board->board[new_index].has_portal) {
+        board->board[old_index].content = ' ';
+        board->board[new_index].content = 'P';
+        return REACHED_PORTAL;
     }
 
     // Collect points
@@ -220,7 +219,7 @@ int move_ghost_charged(board_t* board, int ghost_index, char direction) {
     int result = move_ghost_charged_direction(board, ghost, direction, &new_x, &new_y);
     if (result == INVALID_MOVE) {
         debug("DEFAULT CHARGED MOVE - direction = %c\n", direction);
-        return INVALID_MOVE;
+        return MOVE_COMPLETED;  // Command consumed even if invalid
     }
 
     // Get board indices
@@ -228,13 +227,13 @@ int move_ghost_charged(board_t* board, int ghost_index, char direction) {
     int new_index = get_board_index(board, new_x, new_y);
 
     // Update board - clear old position (restore what was there)
-    board->board[old_index].content = ' '; // Or restore the dot if ghost was on one
+    board->board[old_index].content = ' ';
     // Update ghost position
     ghost->pos_x = new_x;
     ghost->pos_y = new_y;
     // Update board - set new position
     board->board[new_index].content = 'M';
-    return result;
+    return MOVE_COMPLETED;
 }
 
 int move_ghost(board_t* board, int ghost_index, command_t* command) {
@@ -242,10 +241,10 @@ int move_ghost(board_t* board, int ghost_index, command_t* command) {
     int new_x = ghost->pos_x;
     int new_y = ghost->pos_y;
 
-    // check passo
+    // check passo - still waiting, don't advance command
     if (ghost->waiting > 0) {
         ghost->waiting -= 1;
-        return VALID_MOVE;
+        return VALID_MOVE;  // Still waiting, don't advance to next command
     }
     ghost->waiting = ghost->passo;
 
@@ -270,29 +269,29 @@ int move_ghost(board_t* board, int ghost_index, command_t* command) {
         case 'D': // Right
             new_x++;
             break;
-        case 'C': // Charge
-            ghost->current_move += 1;
+        case 'C': // Charge - next move will be charged
             ghost->charged = 1;
-            return VALID_MOVE;
+            return MOVE_COMPLETED;  // Command consumed, advance
         case 'T': // Wait
             if (command->turns_left == 1) {
-                ghost->current_move += 1; // move on
                 command->turns_left = command->turns;
+                return MOVE_COMPLETED;  // Wait finished, advance
             }
-            else command->turns_left -= 1;
-            return VALID_MOVE;
+            else {
+                command->turns_left -= 1;
+                return VALID_MOVE;  // Still waiting
+            }
         default:
             return INVALID_MOVE; // Invalid direction
     }
 
     // Logic for the WASD movement
-    ghost->current_move++;
     if (ghost->charged)
         return move_ghost_charged(board, ghost_index, direction);
 
     // Check boundaries
     if (!is_valid_position(board, new_x, new_y)) {
-        return INVALID_MOVE;
+        return MOVE_COMPLETED;  // Command consumed even if invalid
     }
 
     // Check board position
@@ -302,17 +301,17 @@ int move_ghost(board_t* board, int ghost_index, command_t* command) {
 
     // Check for walls and ghosts
     if (target_content == 'W' || target_content == 'M') {
-        return INVALID_MOVE;
+        return MOVE_COMPLETED;  // Command consumed even if blocked
     }
 
-    int result = VALID_MOVE;
+    int result = MOVE_COMPLETED;
     // Check for pacman
     if (target_content == 'P') {
-        result = find_and_kill_pacman(board, new_x, new_y);
+        find_and_kill_pacman(board, new_x, new_y);
     }
 
     // Update board - clear old position (restore what was there)
-    board->board[old_index].content = ' '; // Or restore the dot if ghost was on one
+    board->board[old_index].content = ' ';
 
     // Update ghost position
     ghost->pos_x = new_x;

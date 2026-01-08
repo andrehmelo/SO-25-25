@@ -48,7 +48,7 @@ typedef struct {
     int n_ghost_threads;
     
     // Thread control
-    bool threads_running;               // Flag to signal threads to stop
+    volatile bool threads_running;      // Flag to signal threads to stop (volatile for multi-thread visibility)
     
 } game_context_t;
 

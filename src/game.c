@@ -165,7 +165,9 @@ int main(int argc, char** argv) {
     if (argc != 2) {
         // Use POSIX write instead of printf (avoid stdio)
         const char* usage_msg = "Usage: ./Pacmanist <level_directory>\n";
-        write(STDERR_FILENO, usage_msg, strlen(usage_msg));
+        if (write(STDERR_FILENO, usage_msg, strlen(usage_msg)) < 0) {
+            // Silently ignore write error
+        }
         return 1;
     }
 
@@ -177,13 +179,17 @@ int main(int argc, char** argv) {
     
     if (n_levels < 0) {
         const char* err_msg = "Error: Cannot open level directory\n";
-        write(STDERR_FILENO, err_msg, strlen(err_msg));
+        if (write(STDERR_FILENO, err_msg, strlen(err_msg)) < 0) {
+            // Silently ignore write error
+        }
         return 1;
     }
     
     if (n_levels == 0) {
         const char* err_msg = "Error: No .lvl files found in directory\n";
-        write(STDERR_FILENO, err_msg, strlen(err_msg));
+        if (write(STDERR_FILENO, err_msg, strlen(err_msg)) < 0) {
+            // Silently ignore write error
+        }
         return 1;
     }
 
@@ -256,6 +262,11 @@ int main(int argc, char** argv) {
                         // CHILD: continues playing the game from current state
                         debug("[%d] Child process - continuing game\n", getpid());
                         has_checkpoint = true;  // Child knows there's a backup
+                        
+                        // Advance pacman to next command (skip the 'G' we just processed)
+                        if (game_board.pacmans[0].n_moves > 0) {
+                            game_board.pacmans[0].current_move++;
+                        }
                         
                         // Reinitialize ncurses in child (fork duplicates but needs refresh)
                         terminal_cleanup();

@@ -291,12 +291,10 @@ void* pacman_thread_func(void* arg) {
             }
             if (cmd.command == 'G') {
                 set_game_state(ctx, GAME_CHECKPOINT);
-                // Wait for checkpoint to be processed
-                while (get_game_state(ctx) == GAME_CHECKPOINT && ctx->threads_running) {
-                    sleep_ms(10);
-                }
-                pacman->current_move++;
-                continue;
+                // Don't increment current_move here - fork will handle it
+                // After fork, child continues from next command
+                // After restore, parent re-executes G (creates new checkpoint)
+                break;  // Exit thread loop - game loop will handle checkpoint
             }
         }
         
@@ -306,6 +304,7 @@ void* pacman_thread_func(void* arg) {
             
             debug("[Pacman] Moving: %c\n", cmd.command);
             int result = move_pacman(board, 0, &cmd);
+            bool is_alive = pacman->alive;  // Read while holding lock
             
             pthread_rwlock_unlock(&ctx->board_lock);
             
@@ -315,7 +314,7 @@ void* pacman_thread_func(void* arg) {
                 break;
             }
             
-            if (result == DEAD_PACMAN || !pacman->alive) {
+            if (result == DEAD_PACMAN || !is_alive) {
                 pthread_mutex_lock(&ctx->state_mutex);
                 ctx->pacman_dead = true;
                 pthread_mutex_unlock(&ctx->state_mutex);
@@ -375,8 +374,8 @@ void* ghost_thread_func(void* arg) {
         // Write lock for moving ghost
         pthread_rwlock_wrlock(&ctx->board_lock);
         
-        debug("[Ghost %d] Moving: %c\n", ghost_index, cmd->command);
-        move_ghost(board, ghost_index, cmd);
+        debug("[Ghost %d] Cmd: %c (move %d)\n", ghost_index, cmd->command, ghost->current_move);
+        int result = move_ghost(board, ghost_index, cmd);
         
         // Check if pacman was killed
         if (!board->pacmans[0].alive) {
@@ -395,15 +394,13 @@ void* ghost_thread_func(void* arg) {
         // Request display refresh
         request_display_refresh(ctx);
         
-        // Wait for passo time between moves
-        int wait_time = ghost->passo > 0 ? ghost->passo : 1;
-        for (int i = 0; i < wait_time && ctx->threads_running && 
-             get_game_state(ctx) == GAME_RUNNING; i++) {
-            sleep_ms(board->tempo > 0 ? board->tempo : 100);
+        // Advance to next move only if command was completed
+        if (result == MOVE_COMPLETED) {
+            ghost->current_move++;
         }
         
-        // Advance to next move
-        ghost->current_move++;
+        // Small delay for game timing
+        sleep_ms(board->tempo > 0 ? board->tempo : 100);
     }
     
     debug("[Ghost %d] Thread exiting\n", ghost_index);

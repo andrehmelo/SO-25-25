@@ -90,11 +90,16 @@ int read_word(int fd, char *buffer, size_t max_len) {
 // Line-based Utilities
 // =============================================================================
 
-void skip_line(int fd) {
+/**
+ * Skip to the end of the current line (after newline or EOF).
+ * Returns 0 on success, -1 on EOF/error.
+ */
+int skip_line(int fd) {
     char c;
-    while (read(fd, &c, 1) == 1 && c != '\n') {
-        // Keep reading until newline or EOF
+    while (read(fd, &c, 1) == 1) {
+        if (c == '\n') return 0;  // Found newline
     }
+    return -1;  // EOF or error
 }
 
 int read_line(int fd, char *buffer, size_t max_len) {

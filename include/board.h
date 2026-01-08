@@ -7,8 +7,9 @@
 #define MAX_GHOSTS 25
 
 typedef enum {
-    REACHED_PORTAL = 1,
-    VALID_MOVE = 0,
+    REACHED_PORTAL = 2,
+    MOVE_COMPLETED = 1,     // Command was consumed, advance to next
+    VALID_MOVE = 0,         // Still waiting (passo), don't advance
     INVALID_MOVE = -1,
     DEAD_PACMAN = -2,
 } move_t;

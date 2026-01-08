@@ -56,8 +56,9 @@ int read_word(int fd, char *buffer, size_t max_len);
 
 /**
  * Skips a line (reads until newline or EOF).
+ * @return 0 on success (found newline), -1 on EOF/error.
  */
-void skip_line(int fd);
+int skip_line(int fd);
 
 /**
  * Reads a line into buffer (without the newline).
