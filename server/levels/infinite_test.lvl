@@ -1,0 +1,8 @@
+# Test level for checkpoint
+DIM 3 5
+TEMPO 100
+PAC test_pacman.p
+MON test_monster.m
+XoooX
+Xoo@X
+XXXXX

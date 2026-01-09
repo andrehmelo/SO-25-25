@@ -1,0 +1,15 @@
+# Level 1 - Simple level
+# Dimensions: 7 rows x 12 columns
+DIM 10 12
+TEMPO 100
+MON monster1.m monster2.m
+XoooooooooXX
+Xooooooooo@X
+XooooooooooX
+XooooooooooX
+XooooooooooX
+XooooooooooX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX

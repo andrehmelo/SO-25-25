@@ -1,0 +1,1606 @@
+pacman_connect: Starting connection...
+  req_pipe_path: /tmp/1_request
+  notif_pipe_path: /tmp/1_notification
+  server_pipe_path: /tmp/pacman_server
+pacman_connect: Created request FIFO
+pacman_connect: Created notification FIFO
+pacman_connect: Opened server FIFO for writing
+pacman_connect: Sent connection request (81 bytes)
+pacman_connect: Opened notification FIFO for reading
+pacman_connect: Server accepted connection
+pacman_connect: Opened request FIFO for writing
+pacman_connect: Connection established successfully!
+Command: #
+pacman_play: Sent command '#'
+Command:  
+pacman_play: Sent command ' '
+Command: P
+pacman_play: Sent command 'P'
+Command: A
+pacman_play: Sent command 'A'
+Command: C
+pacman_play: Sent command 'C'
+Command: M
+pacman_play: Sent command 'M'
+Command: A
+pacman_play: Sent command 'A'
+Command: N
+pacman_play: Sent command 'N'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Received board data (120 bytes)
+Command: B
+pacman_play: Sent command 'B'
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: H
+pacman_play: Sent command 'H'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: V
+pacman_play: Sent command 'V'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: I
+pacman_play: Sent command 'I'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: R
+pacman_play: Sent command 'R'
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: F
+pacman_play: Sent command 'F'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: I
+pacman_play: Sent command 'I'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: L
+pacman_play: Sent command 'L'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: #
+pacman_play: Sent command '#'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: P
+pacman_play: Sent command 'P'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+Command: S
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=0
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=1
+Command: S
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'S'
+Command: O
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'O'
+Command: :
+pacman_play: Sent command ':'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command:  
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: W
+pacman_play: Sent command 'W'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+Command: I
+pacman_play: Sent command 'I'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: I
+pacman_play: Sent command 'I'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: C
+pacman_play: Sent command 'C'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: K
+pacman_play: Sent command 'K'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: B
+pacman_play: Sent command 'B'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: W
+pacman_play: Sent command 'W'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: E
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'E'
+Command: N
+pacman_play: Sent command 'N'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: M
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'M'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: V
+pacman_play: Sent command 'V'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: (
+pacman_play: Sent command '('
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: F
+pacman_play: Sent command 'F'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=2
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=3
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=3
+receive_board_update: Received board data (120 bytes)
+Command: )
+pacman_play: Sent command ')'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=3
+receive_board_update: Received board data (120 bytes)
+Command: P
+pacman_play: Sent command 'P'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=3
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=3
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=4
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: 1
+pacman_play: Sent command '1'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: #
+pacman_play: Sent command '#'
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+Command: A
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'A'
+Command: R
+pacman_play: Sent command 'R'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: I
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'I'
+Command: N
+pacman_play: Sent command 'N'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: G
+pacman_play: Sent command 'G'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: P
+pacman_play: Sent command 'P'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: O
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'O'
+Command: S
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+pacman_play: Sent command 'S'
+receive_board_update: Received board data (120 bytes)
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: I
+pacman_play: Sent command 'I'
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+Command: I
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'I'
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: N
+pacman_play: Sent command 'N'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: :
+pacman_play: Sent command ':'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command:  
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command ' '
+Command: R
+pacman_play: Sent command 'R'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: W
+pacman_play: Sent command 'W'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command:  
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: 1
+pacman_play: Sent command '1'
+Command: ,
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command ','
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+Command: C
+pacman_play: Sent command 'C'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: O
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+pacman_play: Sent command 'O'
+receive_board_update: Received board data (120 bytes)
+Command: L
+pacman_play: Sent command 'L'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: 1
+pacman_play: Sent command '1'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: P
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'P'
+Command: O
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'O'
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: 0
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '0'
+Command:  
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+pacman_play: Sent command ' '
+receive_board_update: Received board data (120 bytes)
+Command: 1
+pacman_play: Sent command '1'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: #
+pacman_play: Sent command '#'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: M
+pacman_play: Sent command 'M'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: V
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'V'
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: M
+pacman_play: Sent command 'M'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: N
+pacman_play: Sent command 'N'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: C
+pacman_play: Sent command 'C'
+Command: O
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'O'
+Command: M
+pacman_play: Sent command 'M'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: M
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'M'
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: N
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'N'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=5
+receive_board_update: Received board data (120 bytes)
+Command: D
+pacman_play: Sent command 'D'
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command: G
+pacman_play: Sent command 'G'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command: 5
+pacman_play: Sent command '5'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+Command: T
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'T'
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command: 5
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '5'
+Command: 0
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '0'
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command: 0
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '0'
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command:  
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+Command: 5
+pacman_play: Sent command '5'
+receive_board_update: Received board data (120 bytes)
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+Command: 0
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=6
+receive_board_update: Received board data (120 bytes)
+Command: D
+pacman_play: Sent command 'D'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 5
+pacman_play: Sent command '5'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 5
+pacman_play: Sent command '5'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+Command: 5
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '5'
+Command: 0
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '0'
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: G
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'G'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: #
+pacman_play: Sent command '#'
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: P
+pacman_play: Sent command 'P'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: C
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'C'
+Command: M
+pacman_play: Sent command 'M'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: N
+pacman_play: Sent command 'N'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: B
+pacman_play: Sent command 'B'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: H
+pacman_play: Sent command 'H'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: V
+pacman_play: Sent command 'V'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: I
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'I'
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: R
+pacman_play: Sent command 'R'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: F
+pacman_play: Sent command 'F'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: I
+pacman_play: Sent command 'I'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: L
+pacman_play: Sent command 'L'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: #
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '#'
+Command:  
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command ' '
+Command: P
+pacman_play: Sent command 'P'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'S'
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: :
+pacman_play: Sent command ':'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: W
+pacman_play: Sent command 'W'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: I
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'I'
+Command: T
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'T'
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: I
+pacman_play: Sent command 'I'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: C
+pacman_play: Sent command 'C'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: K
+pacman_play: Sent command 'K'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: B
+pacman_play: Sent command 'B'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: W
+pacman_play: Sent command 'W'
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: E
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+pacman_play: Sent command 'E'
+receive_board_update: Received board data (120 bytes)
+Command: N
+pacman_play: Sent command 'N'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: M
+pacman_play: Sent command 'M'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: V
+pacman_play: Sent command 'V'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: (
+pacman_play: Sent command '('
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: F
+pacman_play: Sent command 'F'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: )
+pacman_play: Sent command ')'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: P
+pacman_play: Sent command 'P'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 1
+pacman_play: Sent command '1'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: #
+pacman_play: Sent command '#'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: R
+pacman_play: Sent command 'R'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: I
+pacman_play: Sent command 'I'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: N
+pacman_play: Sent command 'N'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: G
+pacman_play: Sent command 'G'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: P
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'P'
+Command: O
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+pacman_play: Sent command 'O'
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: I
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+pacman_play: Sent command 'I'
+receive_board_update: Received board data (120 bytes)
+Command: T
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'T'
+Command: I
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'I'
+Command: O
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'O'
+Command: N
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'N'
+Command: :
+pacman_play: Sent command ':'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: R
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'R'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+Command: W
+pacman_play: Sent command 'W'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command ' '
+Command: 1
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '1'
+Command: ,
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command ','
+Command:  
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command ' '
+Command: C
+pacman_play: Sent command 'C'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: L
+pacman_play: Sent command 'L'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 1
+pacman_play: Sent command '1'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: P
+pacman_play: Sent command 'P'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+pacman_play: Sent command '0'
+receive_board_update: Received board data (120 bytes)
+Command:  
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command ' '
+Command: 1
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '1'
+Command: #
+pacman_play: Sent command '#'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command ' '
+Command: M
+pacman_play: Sent command 'M'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: V
+pacman_play: Sent command 'V'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: M
+pacman_play: Sent command 'M'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: N
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+pacman_play: Sent command 'N'
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: C
+pacman_play: Sent command 'C'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: M
+pacman_play: Sent command 'M'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: M
+pacman_play: Sent command 'M'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: N
+pacman_play: Sent command 'N'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: D
+pacman_play: Sent command 'D'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: G
+pacman_play: Sent command 'G'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 5
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '5'
+Command: 0
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '0'
+Command: 0
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+pacman_play: Sent command '0'
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 5
+pacman_play: Sent command '5'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 5
+pacman_play: Sent command '5'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: D
+pacman_play: Sent command 'D'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 5
+pacman_play: Sent command '5'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 5
+pacman_play: Sent command '5'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 5
+pacman_play: Sent command '5'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: 0
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '0'
+Command: G
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'G'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: #
+pacman_play: Sent command '#'
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: P
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'P'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+Command: C
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'C'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: M
+pacman_play: Sent command 'M'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+Command: N
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'N'
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: B
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'B'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: H
+pacman_play: Sent command 'H'
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: V
+pacman_play: Sent command 'V'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: I
+pacman_play: Sent command 'I'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: R
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'R'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+Command: F
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'F'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: I
+pacman_play: Sent command 'I'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: L
+pacman_play: Sent command 'L'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+Command: #
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '#'
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: P
+pacman_play: Sent command 'P'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: :
+pacman_play: Sent command ':'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: W
+pacman_play: Sent command 'W'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: A
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: I
+pacman_play: Sent command 'I'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+Command: 0
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command '0'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+Command: T
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'T'
+Command: I
+pacman_play: Sent command 'I'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: C
+pacman_play: Sent command 'C'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: K
+pacman_play: Sent command 'K'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: B
+pacman_play: Sent command 'B'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: E
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+pacman_play: Sent command 'E'
+receive_board_update: Received board data (120 bytes)
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+Command: W
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'W'
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: E
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: N
+pacman_play: Sent command 'N'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: M
+pacman_play: Sent command 'M'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: O
+pacman_play: Sent command 'O'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: V
+pacman_play: Sent command 'V'
+Command: E
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+pacman_play: Sent command 'E'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+Command:  
+pacman_play: Sent command ' '
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: (
+pacman_play: Sent command '('
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: F
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+pacman_play: Sent command 'F'
+receive_board_update: Received board data (120 bytes)
+Command: A
+pacman_play: Sent command 'A'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: S
+pacman_play: Sent command 'S'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: T
+pacman_play: Sent command 'T'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: )
+pacman_play: Sent command ')'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)
+Command: P
+pacman_play: Sent command 'P'
+receive_board_update: Got header - 12x10, tempo=100, victory=0, game_over=0, points=7
+receive_board_update: Received board data (120 bytes)

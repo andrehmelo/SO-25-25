@@ -1,0 +1,6 @@
+=== TOP 5 PACMANIST CLIENTS ===
+Active sessions: 1
+
+Rank | Client ID            | Points
+-----+----------------------+--------
+  1  | 1                    |      7

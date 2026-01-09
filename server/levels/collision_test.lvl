@@ -1,0 +1,10 @@
+# Level 2 - Harder level
+DIM 5 10
+TEMPO 80
+PAC pacman2.p
+MON monster2.m monster3.m
+XooooooooX
+XooooooooX
+X@oooooooX
+XooooooooX
+XXXXXXXXXX
